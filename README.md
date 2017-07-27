@@ -15,6 +15,7 @@ Here you create the shell script that refers to your file
 nano filename.sh
 ```
 Files placed in init.d require a header, the header part is from ### BEGIN INIT INFO untill ### END INIT INFO.
+The header file can be copied from the README file that is also located in the init.d folder.
 My python file is located directly in the root folder so then you make a file that looks something like this: 
 
 ```bash
