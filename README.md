@@ -14,16 +14,32 @@ Here you create the shell script that refers to your file
 ```bash
 nano filename.sh
 ```
-
+Files placed in init.d require a header, the header part is from ### BEGIN INIT INFO untill ### END INIT INFO.
 My python file is located directly in the root folder so then you make a file that looks something like this: 
 
 ```bash
 #!/bin/sh
+### BEGIN INIT INFO
+# Provides:          filename
+# Required-Start:    
+# Required-Stop:     
+# Should-Start:      
+# Should-Stop:       
+# X-Start-Before:    
+# X-Stop-After:      
+# Default-Start:     
+# Default-Stop:      
+# X-Interactive:     
+# Short-Description: 
+# Description:        
+#                    
+### END INIT INFO
 
 cd /
-cd /root/
-sudo python filename.py
+cd root/
+sudo python filenamepython.py
 cd /
+
 ```
 
 To add your new shell script to the boot sequence you need to input the following command in the terminal
@@ -38,4 +54,4 @@ Now the only thing that need to be done is to add the permissions to our shell s
 sudo chmod +x /etc/init.d/filename.sh
 ```
 
-And this should conclude it, you will get a warning though for missing headers in the shell script. The warning doesnt stop the process though and it should be running after the next reboot.
+And this should conclude it. The python file should be running after next reboot.
