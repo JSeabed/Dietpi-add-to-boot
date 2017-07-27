@@ -28,7 +28,7 @@ cd /
 
 To add your new shell script to the boot sequence you need to input the following command in the terminal
 
-````bash
+```bash
 sudo update-rc.d filename.sh defaults
 ```
 
