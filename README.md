@@ -26,3 +26,16 @@ sudo python filename.py
 cd /
 ```
 
+To add your new shell script to the boot sequence you need to input the following command in the terminal
+
+````bash
+sudo update-rc.d filename.sh defaults
+```
+
+Now the only thing that need to be done is to add the permissions to our shell script to be allowed to launch in boot
+
+```bash
+chmod +x /etc/init.d/filename.sh
+```
+
+And this should conclude it, you will get a warning though for missing headers in the shell script. The warning doesnt stop the process though and it should be running after the next reboot.
